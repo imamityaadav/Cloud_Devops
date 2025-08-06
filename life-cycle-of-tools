@@ -1,0 +1,151 @@
+1. DevOps Life Cycle
+The DevOps life cycle is a continuous loop of development, testing, deployment, and monitoring.
+
+Phases:
+Plan
+
+Define requirements, roadmap, and tools (Jira, Confluence).
+
+Code
+
+Developers write code (Git, GitHub/GitLab).
+
+Build
+
+Compile code into executables (Maven, Gradle).
+
+Test
+
+Automated testing (Selenium, JUnit, Postman).
+
+Deploy
+
+Release to production (CI/CD pipelines).
+
+Operate
+
+Infrastructure management (Kubernetes, Docker).
+
+Monitor
+
+Track performance (Prometheus, Grafana, ELK).
+
+Feedback & Improve
+
+Gather logs/metrics to refine processes.
+
+Key Principle: Continuous Integration (CI) & Continuous Deployment (CD).
+##############################################################################################
+
+2. Kubernetes Life Cycle
+Kubernetes manages the life cycle of containers, pods, and deployments.
+
+Phases:
+Pod Creation
+
+kubectl create or kubectl apply -f manifest.yaml.
+
+Scheduling
+
+Kube-scheduler assigns pods to nodes.
+
+Container Runtime
+
+Containers start (Docker, containerd).
+
+Running State
+
+Pod is Running.
+
+Health Checks
+
+Liveness Probe (restarts if unhealthy).
+
+Readiness Probe (traffic allowed only if ready).
+
+Scaling
+
+Manual (kubectl scale) or auto (HPA).
+
+Updates & Rollbacks
+
+Rolling updates (kubectl set image).
+
+Termination
+
+Graceful shutdown (SIGTERM → SIGKILL).
+
+#####################################################################################
+3. Terraform Life Cycle
+Terraform follows an Infrastructure as Code (IaC) workflow.
+
+Phases:
+Write
+
+Define resources in .tf files (e.g., AWS EC2, VPC).
+
+Initialize (terraform init)
+
+Downloads providers (AWS, Azure plugins).
+
+Plan (terraform plan)
+
+Preview changes before applying.
+
+Apply (terraform apply)
+
+Creates/modifies infrastructure.
+
+Destroy (terraform destroy)
+
+Removes managed resources.
+
+State Management
+
+terraform state list (track resources).
+
+Remote state (S3 + DynamoDB for locking).
+
+Key Principle: Declarative (define desired state).
+
+##########################################################################################
+4. Jenkins Life Cycle
+Jenkins automates CI/CD pipelines.
+
+Phases:
+Trigger
+
+Git webhook, cron job, or manual run.
+
+Checkout Code
+
+Pulls from Git (git clone).
+
+Build
+
+Compiles code (Maven, npm).
+
+Test
+
+Unit/integration tests (JUnit, pytest).
+
+Artifact Generation
+
+Creates JAR/Docker image.
+
+Deploy
+
+Push to staging/production (kubectl, Ansible).
+
+Post-Build Actions
+
+Notifications (Slack, Email).
+
+Cleanup (delete old builds).
+
+#############################################
+Life Cycle	Key Phases	Tools
+DevOps	Plan → Code → Build → Test → Deploy → Monitor	Git, Jenkins, Docker, K8s
+Kubernetes	Create → Schedule → Run → Monitor → Terminate	kubectl, Helm
+Terraform	Init → Plan → Apply → Destroy	AWS/Azure Provider, State
+Jenkins	Trigger → Build → Test → Deploy → Notify	Maven, Docker, Ansible
