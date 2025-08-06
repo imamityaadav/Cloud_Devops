@@ -1,0 +1,39 @@
+Terraform Interview Questions
+
+1. Type of block in Terraform
+resources block
+variable block
+backend block
+data block
+output block
+provider block
+
+terraform block --- also called as backend block
+locals block
+module block
+
+2. parent-child archectiure
+env- parent dir
+modules- child dir
+variables
+
+3. terraform lifecycle
+init
+plan
+apply 
+destroy
+
+4. Miscellaneous questions
+terraform state file and state lock
+Terraform workspace --- for multi env like prod dev staging
+handle secrets and sensitive data
+mutable and immutable
+count and for_each
+local exec and remote exec
+null resources
+terraform taint
+drift detection
+terraform import
+terraform provisioner  --- execute command or resources during creation for eg- sudo apt-get update
+ 
+ 
