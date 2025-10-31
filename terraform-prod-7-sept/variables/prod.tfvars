@@ -1,40 +1,40 @@
 
 
-backend_bucket = "gyan-bharatam-terrafrom-backend-bucket-prod"
+backend_bucket = ""
 
-backend_path = "prod"
+backend_path = ""
 
 
-customer_name = "gyan-bharatam"
+customer_name = ""
 
-account_id = "975373242096"
+account_id = ""
 
-bucket_name = "gyan-bharatam-prod"
+bucket_name = ""
 
-s3_tags = {environment = "uat", project = "gyan-bharatam"}
+s3_tags = {environment = "uat", project = "namehere"}
 
 #######################VPC##########################
 
 vpc_cidr = "10.84.0.0/16"
 
-database_subnet_1_cidr = "10.84.200.0/24"
+database_subnet_1_cidr = ""
 
-database_subnet_2_cidr = "10.84.201.0/24"
+database_subnet_2_cidr = ""
 
-database_subnet_3_cidr = "10.84.202.0/24"
+database_subnet_3_cidr = ""
 
-private_subnet_1_cidr = "10.84.0.0/19"
+private_subnet_1_cidr = ""
 
-private_subnet_2_cidr = "10.84.32.0/19"
+private_subnet_2_cidr = ""
 
-private_subnet_3_cidr = "10.84.64.0/19"
+private_subnet_3_cidr = ""
 
-vpc_tags = {environment = "prod", project = "gyan-bharatam"}
+vpc_tags = {environment = "prod", project = "namehere"}
 ##########################################################################
 lb_tags = {environment = "UAT"}
 
 
-eks_tags = {environment = "prod", project = "gyan-bharatam"}
+eks_tags = {environment = "prod", project = "namehere"}
 
 
 
@@ -47,11 +47,11 @@ environment = "prod"
 
 region = "ap-south-1"
 
-kms_key_name = "gyan-bharatam-prod-cmk"
+kms_key_name = "namehere-prod-cmk"
 
-kms_tags = {environment = "prod", project = "gyan-bharatam"}
+kms_tags = {environment = "prod", project = "namehere"}
 
-cluster-name = "gyan-bharatam-prod"
+cluster-name = "namehere-prod"
 
 
 cloudwatch_logs = false
@@ -67,7 +67,7 @@ node_groups_test_tt = [
     name           = "karpenter-nodegroup-prod"
     instance_types = ["m6a.large", "m5a.large"]
     ng_test_tags = {
-      project: "gyan-bharatam"
+      project: "namehere"
     }
     labels = {
       prod = "true"
@@ -89,8 +89,8 @@ efs_csi_driver_version       = "v2.1.10-eksbuild.1"
 vpc_cni_version              = "v1.19.5-eksbuild.1"
 
 ###############EFS##################
-efs_tags = {environment = "prod", project = "gyan-bharatam", Name = "gyan-bharatam-prod-efs"}
-efs-security-group = "gyan-bharatam-efs-sg"
+efs_tags = {environment = "prod", project = "namehere", Name = "namehere-prod-efs"}
+efs-security-group = "namehere-efs-sg"
 
 k8s_version = "1.33"
 
@@ -107,20 +107,20 @@ elasticsearch_ec2_instance_type = "t4g.small"
 elasticsearch_ami = "ami-0fad8318b9405c6fb"
 elasticsearch_tags = {environment = "UAT"}
 
-gyan_bharatam_db_instance_identifier = "gyan-bharatam-prod"
+namehere_db_instance_identifier = "namehere-prod"
 
-gyan_bharatam_db_security_group = "gyan-bharatam-prod-sg"
+namehere_db_security_group = "namehere-prod-sg"
 
 
 major_version = "16"
 
-gyan_bharatam_db_allocated_storage = "500"
+namehere_db_allocated_storage = "500"
 
 engine_version = "16.10"
 
-gyan_bharatam_db_instance_type = "db.m7g.xlarge"
+namehere_db_instance_type = "db.m7g.xlarge"
 
-gyan_bharatam_database_name = "gyan_bharatam_prod"
+namehere_database_name = "namehere_prod"
 
 rds_secret_name = "psql"
 
@@ -128,7 +128,7 @@ rds_port = 5432
 
 rds_multi_az = true
 
-rds_tags  = {environment = "prod", project = "gyan-bharatam"}
+rds_tags  = {environment = "prod", project = "namehere"}
 
 js_user = "ec2-js-user"
 
@@ -137,7 +137,7 @@ eks_key_name = "eks-key"
 ##########################opensearch##########################
 
 opensearch_secret_name = "opensearch"
-domain_name                = "gyan-bharatam-prod"
+domain_name                = "namehere-prod"
 opensearch_engine_version  = "OpenSearch_2.19"
 ip_address_type            = "ipv4"
 opensearch_instance_type   = "m7g.4xlarge.search"
@@ -180,8 +180,8 @@ off_peak_window_minutes = 0
 
 # Tags
 opensearch_tags = {
-  project     = "Gyan Bharatam"
-  environment = "Production"
+  project     = "name"
+  environment = "env"
   owner       = "DevOps Team"
   costcenter  = "Engineering"
   backup      = "Required"
